@@ -42,6 +42,7 @@ export class QuizzesService {
 		return this.prismaService.quiz.findMany({
 			orderBy: { createdAt: 'desc' },
 			select: {
+				id: true,
 				title: true,
 				_count: {
 					select: { questions: true }
@@ -50,7 +51,7 @@ export class QuizzesService {
 		});
 	}
 
-	async delete(id:string) {
+	async delete(id: string) {
 		return this.prismaService.quiz.delete({
 			where: { id },
 			select: { id: true, title: true },
