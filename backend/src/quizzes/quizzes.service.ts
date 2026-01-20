@@ -52,7 +52,8 @@ export class QuizzesService {
 
 	async delete(id:string) {
 		return this.prismaService.quiz.delete({
-			where: { id }
+			where: { id },
+			select: { id: true, title: true },
 		});
 	}
 

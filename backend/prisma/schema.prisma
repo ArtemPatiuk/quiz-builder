@@ -16,7 +16,7 @@ model Quiz {
 
 model Question {
   id        String       @id @default(uuid())
-  quiz      Quiz         @relation(fields: [quizId], references: [id])
+  quiz      Quiz         @relation(fields: [quizId], references: [id], onDelete: Cascade)
   quizId    String
   type      QuestionType
   text      String

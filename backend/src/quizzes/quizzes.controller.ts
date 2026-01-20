@@ -5,7 +5,7 @@ import { CreateQuizDto } from './dto/create-quiz.dto';
 @Controller('quizzes')
 export class QuizzesController {
   constructor(private readonly quizzesService: QuizzesService) { }
-  
+
   @Post()
   createQuizz(@Body() dto: CreateQuizDto) {
     return this.quizzesService.create(dto);
