@@ -1,6 +1,9 @@
+import QuizForm from "../components/QuizForm";
 
-
-export default function CreatePage() {
-
-	return <h1>Create</h1>;
+export default function CreateQuizPage() {
+	return (
+		<div className="min-h-screen bg-gray-100 py-10">
+			<QuizForm />
+		</div>
+	);
 }

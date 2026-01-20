@@ -1,4 +1,4 @@
-"use client"; // якщо ти використовуєш Next.js App Router, або просто звичайний компонент
+"use client";
 
 import { useEffect, useState } from "react";
 import { api } from "../../services/api";
